@@ -1,0 +1,74 @@
+// ~/assets/scss/mixin.scss
+// app内部にて共通利用する変数・mixinの定義
+
+/* ==================== Color ==================== */
+
+$__theme: #8E84B1;
+$__red: #D23D49;
+$__green: #3EB691;
+$__cyan: #55B7C7;
+$__magenta: #C75682;
+$__yellow: #EACF30;
+$__indigo: #082737;
+$__cream: #EAE4A0;
+
+/* ==================== BreakPoint ==================== */
+
+// - breakpoint設定
+
+// @include bp(xx){
+//    中身を書く
+//  }
+// xxの部分に$breakpoints内の要素を書く（mo: モバイル、tb: タブレット、pc: PC ）
+
+$breakpoints: (
+  mo: screen and (max-width: 460px),
+  tb: screen and (max-width: 1024px),
+  pc: screen and (min-width: 1025px),
+  lg: screen and (min-width: 1200px)
+);
+
+@mixin bp($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)}{
+    @content
+  }
+};
+
+/* ==================== Utility Mixins ==================== */
+
+// border-radiusのプリセット
+@mixin border-radius-mixin{
+  @include bp(mo){
+    border-radius: 30px;
+  }
+  border-radius: 40px;
+};
+
+// キャプションサイズ
+@mixin caption-mixin{
+  @include bp(mo){
+    margin: 50px 0;
+    height: calc(100px + 15vw);
+  }
+  margin: 70px 30px;
+  height: calc(120px + 20.5vw);
+  background: $__theme;
+  background-size: contain;
+}
+
+// 擬似要素アイコン等でのbg画像指定によるアイコンサイズ可変対応
+@mixin icon-pseudo-mixin{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -3px;
+  left: -45px;
+  @include bp(mo){
+    width: 30px;
+    height: 30px;
+    left: -8.6vmin;
+  }
+  background-size: calc(12px + 1vmin);
+}

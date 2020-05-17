@@ -1,0 +1,225 @@
+// ~/assets/scss/common.scss
+// ここでは、app共通のスタイルを格納します。
+
+*{
+  font-family: 'Avenir Next', Helvetica, 'Yu Gothic', '游ゴシック体', YuGothic, '游ゴシック', sans-serif;
+  line-height: 1.4;
+  color: $__indigo;
+  text-decoration: none;
+}
+
+h1 h2 h3 h4 h5 p{
+  font-family: 'Avenir Next', Helvetica, 'Yu Gothic', '游ゴシック体', YuGothic, '游ゴシック', sans-serif;
+}
+
+h1{
+  @include bp(tb){
+    font-size: calc(24px + 5vh);
+  }
+  @include bp(mo){
+    font-size: calc(10px + 5vh);
+    margin: 0 0 2vh 30px;
+  }
+  font-size: calc(48px + 3vmax);
+  line-height: 1;
+  margin: 0 0 2vh 40px;
+  color: $__theme;
+}
+
+h2 {
+  @include bp(mo){
+    width: 110%;
+    font-size: calc(30px + 0.8vmin);
+    margin: 0 0 0 3%;
+  }
+  font-size: calc(44px + 1.8vmin);
+  color: $__theme;
+}
+
+h3 {
+  position: relative;
+  display: block;
+  width: 100%;
+  @include bp(mo){
+    font-size: calc(20px + 0.8vmin);
+    margin: 0 0 25px 20px;
+  }
+  margin: 0 0 35px 25px;
+  font-size: 32px;
+}
+
+h4 {
+  position: relative;
+  font-size: 24px;
+  margin: 15px 0 20px 10px;
+  @include bp(mo){
+    font-size: 18px;
+  }
+  &::before{
+    content: "●";
+    position: absolute;
+    top: 7px;
+    left: -40px;
+    font-size: 0.6em;
+    @include bp(mo){
+      top: 5px;
+      left: -20px;
+    }
+  }
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: bold;
+}
+h6{
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.9;
+  @include bp(mo){
+    line-height: 1.75;
+  }
+}
+
+ul, ol {
+  padding: 3% 5%;
+}
+
+li{
+  line-height: 1.8;
+}
+
+html {
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+/* ==================== utils ==================== */
+
+.foundation{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0 0 0;
+  @include bp(mo){
+    padding: 10% 5%;
+  }
+  padding: 10% 15%;
+}
+.topicsarea{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  @include bp(mo){
+    padding: 10% 5%;
+  }
+  padding: 5% 7% 10%;
+}
+.DNL{
+  &__h4{
+    margin: 30px 0 30px 50px;
+    @include bp(mo){
+      margin: 30px 0 30px 20px;
+    }
+  }
+}
+.DNL__textarea {
+  & > p{
+    position: relative;
+    margin: 10px 0;
+    margin-left: 40px;
+    @include bp(mo){
+      margin-left: 25px;
+      font-size: 4.1vmin;
+    }
+    font-weight: bold;
+  }
+  & > .date::before{
+    @include icon-pseudo-mixin;
+    background-size: calc(17px + 1.25vmin);
+  }
+  & > .location::before{
+    @include icon-pseudo-mixin;
+    left: -42px;
+    @include bp(mo){
+      left: -7.8vmin;
+    }
+  }
+}
+
+// 画像v-for用
+.imgHolder{
+  display: block;
+  width: 320px;
+  height: 200px;
+  margin: 50px 20px;
+  @include bp(lg){
+    width: 384px;
+    height: 240px;
+    margin: 50px 10px;
+  }
+  @include bp(mo){
+    width: 100%;
+    height: 62.5vw;
+    margin: 30px 0;
+  }
+  @include border-radius-mixin;
+  background-size: cover;
+  transition: all 0.3s ease 0s;
+  &:hover{
+    box-shadow: 0 3px 8px 4px rgba(0, 0, 0, 0.25);
+    transform: translateY(-0.2em);
+  }
+}
+
+// spanClass
+.span{
+  &__imgHolder{
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: center;
+    color: white;
+  }
+}
+
+// text properties
+.text{
+  &__link{
+    font-weight: bold;
+    color: $__theme;
+  }
+}
+
+
+
+/* ==================== others ==================== */
+
+// Layer1 firstview画像用
+
+.L1__dv2{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 63%;
+  max-width: 950px;
+  z-index: 1;
+  @include bp(tb){
+    width: 100vmin;
+  }
+  @include bp(mo){
+    width: 130%;
+  }
+}
+
+.clear__pseudo::before{
+  content: none;
+}
