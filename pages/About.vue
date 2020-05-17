@@ -240,12 +240,12 @@
         }
 
         .name2{
-          position:absolute;
+          display:unset;
           position: absolute;
-  top: 50%; /*親要素を起点に上から50%*/
-  left: 50%;  /*親要素を起点に左から50%*/
-  transform: translateY(-50%) translateX(-50%); /*要素の大きさの半分ずつを戻す*/
-  -webkit-transform: translateY(-50%) translateX(-50%);
+          top: 50%; /*親要素を起点に上から50%*/
+          left: 50%;  /*親要素を起点に左から50%*/
+          transform: translateY(-50%) translateX(-50%); /*要素の大きさの半分ずつを戻す*/
+          -webkit-transform: translateY(-50%) translateX(-50%);
           font-family: Bahnschrift;
           font-size: 45px;
         }
