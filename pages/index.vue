@@ -44,6 +44,7 @@
           margin: 0;
           padding: 0;
           box-sizing: border-box;
+          font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "sans-serif";
       }
 
       a{
@@ -71,7 +72,6 @@
 
       .name{
           position: absolute;
-          font-family: Bahnschrift;
           font-size: 45px;
           top: 30%;
           left: 12%;
@@ -82,7 +82,6 @@
         display: flex;
         left: 55%;
         top: 70%;
-        font-family: Bahnschrift;
       }
 
       .About,.Schedule,.Member{

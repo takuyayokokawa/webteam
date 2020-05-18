@@ -47,6 +47,13 @@ export default {
   /*
   ** Nuxt.js modules
   */
+
+ modules: [['nuxt-webfontloader']],
+ webfontloader: {
+   google: {
+     families: ['Cairo']
+   }
+ },
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',

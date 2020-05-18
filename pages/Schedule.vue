@@ -80,6 +80,7 @@
           margin: 0;
           padding: 0;
           box-sizing: border-box;
+          font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "sans-serif";
       }
 
       .backgrounds{
@@ -108,7 +109,6 @@
       }
 
       .name{
-          font-family: Bahnschrift;
           font-size: 45px;
       }
 
@@ -203,7 +203,6 @@
       .last{
           font-size: 40px;
           color: black;
-          font-family: Bahnschrift;
       }
 
 
@@ -216,7 +215,6 @@
         display: flex;
         left: 55%;
         top: 70%;
-        font-family: Bahnschrift;
       }
 
       .About,.Schedule,.Member{
@@ -249,7 +247,6 @@
   left: 50%;  /*親要素を起点に左から50%*/
   transform: translateY(-50%) translateX(-50%); /*要素の大きさの半分ずつを戻す*/
   -webkit-transform: translateY(-50%) translateX(-50%);
-          font-family: Bahnschrift;
           font-size: 45px;
         }
 

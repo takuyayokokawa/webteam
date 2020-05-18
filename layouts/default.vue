@@ -17,6 +17,7 @@
 
 <style>
 html {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "sans-serif";
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
