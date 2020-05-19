@@ -16,7 +16,10 @@
 
     <div class="contents">
         <div class="first">
-            <h2>ただいま準備中…</h2>
+            <h2>▼メンバー紹介のサイトです。新規のみんなにもこんなもの作ってもらう予定！</h2>
+            </br>
+            </br>
+            <a href="https://unstashinkan2020.github.io/syokai/">https://unstashinkan2020.github.io/syokai/</a>
         </div>
 
         <div class="footer">
@@ -106,7 +109,12 @@
           width: 80%;
           height: auto;
           margin: 0 auto;
-          text-align: left;
+          text-align: center;
+      }
+
+      a{
+        font-size:20px ;
+        color: black;
 
       }
 
